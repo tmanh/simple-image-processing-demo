@@ -104,6 +104,11 @@ def demo_laplacian_filter():
     origin = get_image('gray')
     laplacian_image, sharpened_image = laplacian_sharpening(origin)
 
+    cv2.imshow('Origin', origin)
+    cv2.imshow('Sharpened', sharpened_image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
     plt.subplot(1,3,1),plt.imshow(origin,'gray')
     plt.title('Origin'), plt.xticks([]), plt.yticks([])
     plt.subplot(1,3,2),plt.imshow(laplacian_image,'gray')
